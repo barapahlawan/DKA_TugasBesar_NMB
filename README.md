@@ -1,43 +1,46 @@
-# 🩸 Prediksi Risiko Penyakit Diabetes Menggunakan Logika Fuzzy
+<div align="center">
 
-Proyek ini berfokus pada pengembangan sistem komputasi cerdas menggunakan *Fuzzy Inference System* (FIS) untuk memprediksi risiko penyakit diabetes. Prediksi dalam sistem ini difokuskan pada dua parameter input medis, yaitu usia dan kadar glukosa darah. Sistem ini diimplementasikan menggunakan dua metode logika fuzzy, yaitu **Mamdani** dan **Sugeno Linear**, untuk kemudian dievaluasi dan dibandingkan performanya.
+# 🏥 Tugas Besar Dasar Kecerdasan Artifisial 🏥
+### Fuzzy Inference System with Mamdani and Sugeno Method
 
-## 📊 Dataset
-* Dataset yang digunakan bersumber dari *Diabetes Dataset* publik yang dibuat oleh Akshay Dattatray Khare di platform Kaggle.
-* Data awal terdiri dari 768 baris. 
-* Setelah tahap *pre-processing* (menghapus anomali data medis dengan nilai usia atau glukosa 0), dataset bersih yang digunakan berjumlah 763 baris data.
-* Variabel Target (Outcome) diklasifikasikan menjadi dua: **Aman** dan **Berisiko**.
+<br/>
 
-## ⚙️ Metodologi Sistem Fuzzy
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org)
+[![License](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE)
+![Status](https://img.shields.io/badge/Status-Completed-10B981?style=for-the-badge)
+[![Dataset](https://img.shields.io/badge/Dataset-Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/akshaydattatraykhare/diabetes-dataset)
 
-Sistem ini dikembangkan sepenuhnya menggunakan Python (melibatkan library `pandas`, `numpy`, `matplotlib`, dan `scikit-learn`) dengan membangun fungsi fuzzy dari awal (tanpa library skfuzzy).
+<br/>
 
-### 1. Fuzzifikasi
-Variabel input tegas (crisp) diubah menggunakan fungsi keanggotaan berbentuk segitiga (*triangular*) dan trapesium (*trapezoidal*).
-* **Usia:** Dibagi menjadi *Muda*, *Paruh Baya*, dan *Tua*.
-* **Kadar Glukosa:** Dibagi menjadi *Rendah*, *Sedang*, dan *Tinggi*.
+> **PENERAPAN FUZZY SYSTEM DALAM PENENTUAN RISIKO PENYAKIT DIABETES MENGGUNAKAN METODE MAMDANI DAN SUGENO**
 
-### 2. Inferensi & Basis Aturan (Rule Base)
-Sistem menerapkan 9 aturan fuzzy (*fuzzy rules*) untuk mengevaluasi kombinasi kondisi glukosa dan usia. 
+<br/>
 
-### 3. Defuzzifikasi
-* **Metode Mamdani:** Menggunakan perhitungan titik pusat penyesuaian (*Center of Gravity*) untuk menentukan kategori. Batas ambang klasifikasi (threshold) ditetapkan pada nilai 50.
-* **Metode Sugeno:** Menggunakan rumus rata-rata tertimbang (*Weighted Average*) dari nilai konstan yang ditetapkan pada tiap aturan.
+---
 
-## 📈 Evaluasi & Hasil
-Sistem diuji ke seluruh dataset dan menghasilkan metrik evaluasi klasifikasi berikut:
-* **Metode Mamdani:** Berhasil mencapai akurasi sebesar **72%** dengan F1-Score **0.71**.
-* **Metode Sugeno:** Menunjukkan akurasi yang sedikit lebih tinggi yaitu **73%**, dengan F1-score **0.71**.
+</div>
 
-Kedua metode menunjukkan kecenderungan performa yang sama, di mana *precision* untuk memprediksi pasien di kelas "Aman" lebih akurat (0.84) dibandingkan kelas "Berisiko" (0.58). 
+## 👥 Anggota Kelompok
 
-## 🚀 Cara Menjalankan Proyek
-1. *Clone* repositori ini ke dalam mesin lokal Anda.
-2. Pastikan Anda telah menginstal seluruh dependensi yang ada pada file `requirements.txt`.
-3. Buka dan jalankan blok kode di dalam `src/tubesDKA.ipynb` menggunakan Jupyter Notebook atau layanan Google Colab.
+<div align="center">
 
-## 👥 Tim Pengembang
-Proyek Tugas Besar mata kuliah Dasar Kecerdasan Artifisial ini disusun oleh mahasiswa S-1 Informatika, Fakultas Informatika, Universitas Telkom:
-* Nabilah Putri Desky
-* Alicia Mazza
-* M. Akbar Putra Pahlawan
+| Nama | NIM | Kelas |
+|:----|:---:|:-----:|
+| Nabilah Putri Desky | 103012300343 | IF-47-04 |
+| Alicia Mazza | 103012330089 | IF-47-04 |
+| Muhammad Akbar Putra Pahlawan | 103012330227 | IF-47-04 |
+
+**S-1 Informatika · Fakultas Informatika · Telkom University, Bandung**
+
+**Mata Kuliah:** CAK2HAB3 – Dasar Kecerdasan Artifisial · Mei 2025
+
+</div>
+
+<br/>
+
+<div align="justify">
+  
+  ## SUMMARY
+Proyek ini mengembangkan sistem deteksi dini risiko diabetes menggunakan metode Fuzzy Inference System (FIS). Memanfaatkan parameter klinis berupa usia dan kadar glukosa darah, sistem ini membandingkan kinerja algoritma Fuzzy Mamdani dan Sugeno dalam menangani ketidakpastian diagnosis medis. Hasil pengujian menunjukkan tingkat akurasi yang andal (72% untuk Mamdani dan 73% untuk Sugeno) untuk mengklasifikasikan pasien ke dalam kategori "Aman" atau "Berisiko", menjadikannya alat bantu penalaran diagnostik awal yang efektif.
+</div>
